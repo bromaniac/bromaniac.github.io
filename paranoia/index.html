@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paranoia — a solo adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="title-block">
+      <h1>PARANOIA</h1>
+      <p class="tagline">A solo adventure &middot; The Computer is your friend.</p>
+    </div>
+    <div class="toolbar">
+      <button id="btn-new" type="button">New Game</button>
+      <button id="btn-save" type="button">Save</button>
+      <button id="btn-load" type="button">Load</button>
+      <a href="#" id="about-link">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="output" aria-live="polite" aria-label="Game output"></section>
+
+    <aside id="sidebar">
+      <h2>Character</h2>
+      <pre id="stats"></pre>
+      <div id="status" aria-label="Status"></div>
+    </aside>
+  </main>
+
+  <footer>
+    <div id="banner" hidden>
+      <p>Game over &mdash; thanks for playing.</p>
+    </div>
+    <div id="actions" role="group" aria-label="Choices"></div>
+  </footer>
+
+  <div id="toast" hidden></div>
+
+  <dialog id="about-dialog" aria-labelledby="about-title">
+    <div class="about-head">
+      <h2 id="about-title">About Paranoia</h2>
+      <button id="about-close" type="button" aria-label="Close">&times;</button>
+    </div>
+    <p class="about-lead">
+      This web version is a TypeScript port of <code>py-paranoia</code> 1.3.2,
+      which carries the following original source comment:
+    </p>
+    <pre class="about-comment">This is a solo paranoia game taken from the Jan/Feb issue (No 77) of
+SpaceGamer/FantasyGamer magazine.
+
+Article by Sam Shirley.
+
+Originally implemented in C on Vax 11/780 under UNIX by Tim Lister
+
+Ported to Python on an Apple Powerbook G4 by Sean P. Kane.
+
+Additional major Python optimizations contributed by:
+Andy Gimblett, Scott David Daniels, and Steven Bethard.
+
+https://github.com/spkane/py-paranoia
+
+This is a public domain adventure and may not be sold for profit</pre>
+  </dialog>
+
+  <script src="game.js"></script>
+</body>
+</html>
